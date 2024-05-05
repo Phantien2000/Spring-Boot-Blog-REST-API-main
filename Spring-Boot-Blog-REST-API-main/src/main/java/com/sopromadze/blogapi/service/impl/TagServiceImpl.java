@@ -1,15 +1,15 @@
 package com.sopromadze.blogapi.service.impl;
 
-import com.sopromadze.blogapi.exception.ResourceNotFoundException;
-import com.sopromadze.blogapi.exception.UnauthorizedException;
-import com.sopromadze.blogapi.model.Tag;
-import com.sopromadze.blogapi.model.role.RoleName;
-import com.sopromadze.blogapi.payload.ApiResponse;
-import com.sopromadze.blogapi.payload.PagedResponse;
-import com.sopromadze.blogapi.repository.TagRepository;
+import com.sopromadze.blogapi.infrastructure.exception.ResourceNotFoundException;
+import com.sopromadze.blogapi.infrastructure.exception.UnauthorizedException;
+import com.sopromadze.blogapi.infrastructure.model.Tag;
+import com.sopromadze.blogapi.infrastructure.model.role.RoleName;
+import com.sopromadze.blogapi.domain.payload.ApiResponse;
+import com.sopromadze.blogapi.domain.payload.PagedResponse;
+import com.sopromadze.blogapi.infrastructure.repository.TagRepository;
 import com.sopromadze.blogapi.security.UserPrincipal;
 import com.sopromadze.blogapi.service.TagService;
-import com.sopromadze.blogapi.utils.AppUtils;
+import com.sopromadze.blogapi.infrastructure.utils.AppUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

@@ -1,7 +1,7 @@
 package com.sopromadze.blogapi.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.sopromadze.blogapi.model.user.User;
+import com.sopromadze.blogapi.infrastructure.model.user.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

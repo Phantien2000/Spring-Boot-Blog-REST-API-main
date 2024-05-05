@@ -1,9 +1,9 @@
 package com.sopromadze.blogapi.service;
 
-import com.sopromadze.blogapi.payload.ApiResponse;
-import com.sopromadze.blogapi.payload.PagedResponse;
-import com.sopromadze.blogapi.payload.PhotoRequest;
-import com.sopromadze.blogapi.payload.PhotoResponse;
+import com.sopromadze.blogapi.domain.payload.ApiResponse;
+import com.sopromadze.blogapi.domain.payload.PagedResponse;
+import com.sopromadze.blogapi.domain.payload.PhotoRequest;
+import com.sopromadze.blogapi.domain.payload.PhotoResponse;
 import com.sopromadze.blogapi.security.UserPrincipal;
 
 public interface PhotoService {

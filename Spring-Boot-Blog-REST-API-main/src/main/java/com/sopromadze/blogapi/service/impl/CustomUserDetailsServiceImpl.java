@@ -1,7 +1,7 @@
 package com.sopromadze.blogapi.service.impl;
 
-import com.sopromadze.blogapi.model.user.User;
-import com.sopromadze.blogapi.repository.UserRepository;
+import com.sopromadze.blogapi.infrastructure.model.user.User;
+import com.sopromadze.blogapi.infrastructure.repository.UserRepository;
 import com.sopromadze.blogapi.security.UserPrincipal;
 import com.sopromadze.blogapi.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
