@@ -1,9 +1,9 @@
 package com.sopromadze.blogapi.service;
 
-import com.sopromadze.blogapi.model.Comment;
-import com.sopromadze.blogapi.payload.ApiResponse;
-import com.sopromadze.blogapi.payload.CommentRequest;
-import com.sopromadze.blogapi.payload.PagedResponse;
+import com.sopromadze.blogapi.infrastructure.model.Comment;
+import com.sopromadze.blogapi.domain.payload.ApiResponse;
+import com.sopromadze.blogapi.domain.payload.CommentRequest;
+import com.sopromadze.blogapi.domain.payload.PagedResponse;
 import com.sopromadze.blogapi.security.UserPrincipal;
 
 public interface CommentService {

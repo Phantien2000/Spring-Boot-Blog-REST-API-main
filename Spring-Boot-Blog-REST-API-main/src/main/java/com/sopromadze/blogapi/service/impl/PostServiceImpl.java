@@ -1,25 +1,25 @@
 package com.sopromadze.blogapi.service.impl;
 
-import com.sopromadze.blogapi.exception.BadRequestException;
-import com.sopromadze.blogapi.exception.ResourceNotFoundException;
-import com.sopromadze.blogapi.exception.UnauthorizedException;
-import com.sopromadze.blogapi.model.Category;
-import com.sopromadze.blogapi.model.Post;
-import com.sopromadze.blogapi.model.Tag;
-import com.sopromadze.blogapi.model.role.RoleName;
-import com.sopromadze.blogapi.model.user.User;
-import com.sopromadze.blogapi.payload.ApiResponse;
-import com.sopromadze.blogapi.payload.PagedResponse;
-import com.sopromadze.blogapi.payload.PostRequest;
-import com.sopromadze.blogapi.payload.PostResponse;
-import com.sopromadze.blogapi.repository.CategoryRepository;
-import com.sopromadze.blogapi.repository.PostRepository;
-import com.sopromadze.blogapi.repository.TagRepository;
-import com.sopromadze.blogapi.repository.UserRepository;
+import com.sopromadze.blogapi.infrastructure.exception.BadRequestException;
+import com.sopromadze.blogapi.infrastructure.exception.ResourceNotFoundException;
+import com.sopromadze.blogapi.infrastructure.exception.UnauthorizedException;
+import com.sopromadze.blogapi.infrastructure.model.Category;
+import com.sopromadze.blogapi.infrastructure.model.Post;
+import com.sopromadze.blogapi.infrastructure.model.Tag;
+import com.sopromadze.blogapi.infrastructure.model.role.RoleName;
+import com.sopromadze.blogapi.infrastructure.model.user.User;
+import com.sopromadze.blogapi.domain.payload.ApiResponse;
+import com.sopromadze.blogapi.domain.payload.PagedResponse;
+import com.sopromadze.blogapi.domain.payload.PostRequest;
+import com.sopromadze.blogapi.domain.payload.PostResponse;
+import com.sopromadze.blogapi.infrastructure.repository.CategoryRepository;
+import com.sopromadze.blogapi.infrastructure.repository.PostRepository;
+import com.sopromadze.blogapi.infrastructure.repository.TagRepository;
+import com.sopromadze.blogapi.infrastructure.repository.UserRepository;
 import com.sopromadze.blogapi.security.UserPrincipal;
 import com.sopromadze.blogapi.service.PostService;
-import com.sopromadze.blogapi.utils.AppConstants;
-import com.sopromadze.blogapi.utils.AppUtils;
+import com.sopromadze.blogapi.infrastructure.utils.AppConstants;
+import com.sopromadze.blogapi.infrastructure.utils.AppUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -32,12 +32,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.sopromadze.blogapi.utils.AppConstants.CATEGORY;
-import static com.sopromadze.blogapi.utils.AppConstants.CREATED_AT;
-import static com.sopromadze.blogapi.utils.AppConstants.ID;
-import static com.sopromadze.blogapi.utils.AppConstants.POST;
-import static com.sopromadze.blogapi.utils.AppConstants.TAG;
-import static com.sopromadze.blogapi.utils.AppConstants.USER;
+import static com.sopromadze.blogapi.infrastructure.utils.AppConstants.CATEGORY;
+import static com.sopromadze.blogapi.infrastructure.utils.AppConstants.CREATED_AT;
+import static com.sopromadze.blogapi.infrastructure.utils.AppConstants.ID;
+import static com.sopromadze.blogapi.infrastructure.utils.AppConstants.POST;
+import static com.sopromadze.blogapi.infrastructure.utils.AppConstants.TAG;
+import static com.sopromadze.blogapi.infrastructure.utils.AppConstants.USER;
 
 @Service
 public class PostServiceImpl implements PostService {
